@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track your QuickShip parcel live. View real-time GPS progress, milestone checkpoints, and estimated delivery times.">
+  <title>Track Your Shipment | QuickShip™ Logistics</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Top Header & Navigation
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="QuickShip Logistics Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <span class="brand-text">Quick<span>Ship</span></span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="nav-toggle-label" title="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="tracking.html" class="nav-link active">Tracking</a>
+        <a href="booking.html" class="nav-link">Book Courier</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tracking.html" class="btn btn-secondary btn-sm">Track Parcel</a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book Delivery</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. Tracking Header & Search Input
+       ======================================================================== -->
+  <section class="tracking-hero">
+    <div class="container">
+      <span class="section-tag">Live Satellite Telemetry</span>
+      <h1 class="section-title">Consignment & Parcel Tracking</h1>
+      <p class="section-subtitle">Real-time status updates, transit timeline, and estimated doorstep delivery.</p>
+
+      <div class="tracking-search-box">
+        <form action="tracking.html" method="GET" class="track-form">
+          <div class="track-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="text" 
+              name="id" 
+              class="track-input" 
+              placeholder="Enter Consignment or Tracking Number" 
+              value="QS-8829-US" 
+              required
+              aria-label="Tracking Number"
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Locate Parcel</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. Main Shipment Status Card & Timeline
+       ======================================================================== -->
+  <main class="section" style="padding-top: 1rem;">
+    <div class="container">
+
+      <!-- Prominent Demonstration Label -->
+      <div class="demo-alert-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <div>
+          <strong>Demonstration Data:</strong> The shipment data below is simulated sample telemetry for tracking ID <code>QS-8829-US</code> to showcase the pure HTML & CSS layout.
+        </div>
+      </div>
+
+      <!-- Main Tracking Card -->
+      <div class="tracking-display-card">
+        
+        <!-- Header Bar -->
+        <div class="tracking-header-bar">
+          <div>
+            <div style="font-size: 0.8125rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Consignment Number</div>
+            <h2>AWB #QS-8829-US</h2>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span class="badge badge-primary">Express Air Priority</span>
+            <span class="badge badge-warning" style="background-color: #fef3c7; color: #92400e; font-weight: 700;">● IN TRANSIT</span>
+          </div>
+        </div>
+
+        <div class="tracking-body-content">
+          
+          <!-- Estimated Delivery Banner Box -->
+          <div style="display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); color: #ffffff; padding: 1.5rem 2rem; border-radius: var(--radius-lg); margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <div style="font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Estimated Delivery Window</div>
+              <div style="font-size: 1.65rem; font-weight: 800; font-family: var(--font-heading); margin-top: 0.25rem;">
+                Today, Nov 20 • by 4:30 PM EST
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-size: 0.8125rem; opacity: 0.85;">Carrier Assignment</div>
+              <div style="font-weight: 700; font-size: 1.05rem;">QuickShip Air Flight QS-204</div>
+            </div>
+          </div>
+
+          <!-- Visual Delivery Progress Timeline -->
+          <h3 style="font-size: 1.125rem; margin-bottom: 1.5rem;">Shipment Lifecycle</h3>
+          <div class="tracking-timeline">
+            <div class="timeline-progress-fill"></div>
+
+            <!-- Step 1: Completed -->
+            <div class="timeline-step completed">
+              <div class="step-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="step-status-title">Order Booked</div>
+              <div class="step-timestamp">Nov 19, 08:30 AM<br>San Francisco Hub</div>
+            </div>
+
+            <!-- Step 2: Completed -->
+            <div class="timeline-step completed">
+              <div class="step-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="step-status-title">Picked Up</div>
+              <div class="step-timestamp">Nov 19, 10:15 AM<br>Courier Scanned</div>
+            </div>
+
+            <!-- Step 3: Active In-Transit -->
+            <div class="timeline-step active">
+              <div class="step-node">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+                </svg>
+              </div>
+              <div class="step-status-title">In Transit</div>
+              <div class="step-timestamp">Nov 20, 06:40 AM<br>En Route to JFK Hub</div>
+            </div>
+
+            <!-- Step 4: Pending -->
+            <div class="timeline-step">
+              <div class="step-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="step-status-title">Delivered</div>
+              <div class="step-timestamp">Expected Today<br>By Courier Michael</div>
+            </div>
+          </div>
+
+          <!-- Shipment Meta Details Grid -->
+          <div class="shipment-details-grid">
+            <div class="shipment-info-block">
+              <span class="shipment-label">Origin Location</span>
+              <span class="shipment-value">San Francisco, CA (SFO)</span>
+            </div>
+
+            <div class="shipment-info-block">
+              <span class="shipment-label">Destination Address</span>
+              <span class="shipment-value">New York, NY 10022 (JFK)</span>
+            </div>
+
+            <div class="shipment-info-block">
+              <span class="shipment-label">Service Level</span>
+              <span class="shipment-value">Express Next-Morning Air</span>
+            </div>
+
+            <div class="shipment-info-block">
+              <span class="shipment-label">Sender</span>
+              <span class="shipment-value">Alex Morgan • TechCorp Labs</span>
+            </div>
+
+            <div class="shipment-info-block">
+              <span class="shipment-label">Recipient</span>
+              <span class="shipment-value">Rachel Adams • Adams Law</span>
+            </div>
+
+            <div class="shipment-info-block">
+              <span class="shipment-label">Declared Weight / Dimensions</span>
+              <span class="shipment-value">2.50 kg (30 × 20 × 15 cm)</span>
+            </div>
+          </div>
+
+          <!-- Activity History Table -->
+          <div class="history-section">
+            <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Checkpoint Audit Log</h3>
+            <div style="overflow-x: auto;">
+              <table class="history-table">
+                <thead>
+                  <tr>
+                    <th>Date & Timestamp</th>
+                    <th>Facility / Location</th>
+                    <th>Activity Status</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Nov 20, 2026 - 06:40 AM</strong></td>
+                    <td>New York Sorting Facility (JFK)</td>
+                    <td><span class="badge badge-warning">In Transit</span></td>
+                    <td>Flight QS-204 landed. Dispatched for sortation.</td>
+                  </tr>
+                  <tr>
+                    <td>Nov 19, 2026 - 11:20 PM</td>
+                    <td>San Francisco Air Terminal (SFO)</td>
+                    <td><span class="badge badge-primary">Departed</span></td>
+                    <td>Loaded into outbound cargo flight container.</td>
+                  </tr>
+                  <tr>
+                    <td>Nov 19, 2026 - 04:15 PM</td>
+                    <td>Bay Area Central Hub, CA</td>
+                    <td><span class="badge badge-primary">Processed</span></td>
+                    <td>Barcode scanned & security weigh-in verified.</td>
+                  </tr>
+                  <tr>
+                    <td>Nov 19, 2026 - 10:15 AM</td>
+                    <td>450 Market St, San Francisco</td>
+                    <td><span class="badge badge-success">Picked Up</span></td>
+                    <td>Handed over by sender. Driver signature recorded.</td>
+                  </tr>
+                  <tr>
+                    <td>Nov 19, 2026 - 08:30 AM</td>
+                    <td>QuickShip Digital Gateway</td>
+                    <td><span class="badge badge-primary">Created</span></td>
+                    <td>Shipping label generated by Alex Morgan.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       4. Professional Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <span>Quick<span style="color: #60a5fa;">Ship</span></span>
+          </a>
+          <p class="footer-desc">
+            QuickShip is a commercial-grade courier logistics platform delivering parcels with speed, transparency, and high reliability.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Delivery Services</a></li>
+            <li><a href="tracking.html">Track Shipment</a></li>
+            <li><a href="booking.html">Book Courier Pickup</a></li>
+            <li><a href="contact.html">Support & FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Logistics Tiers</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Same-Day Express</a></li>
+            <li><a href="services.html">Standard Ground</a></li>
+            <li><a href="services.html">Express Air Priority</a></li>
+            <li><a href="services.html">Enterprise Freight</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Logistics Briefing</h4>
+          <p class="footer-newsletter-text">Subscribe for shipping rate updates and logistics tips.</p>
+          <form class="newsletter-form" action="#" method="POST" onsubmit="return false;">
+            <input type="email" class="newsletter-input" placeholder="Your business email" required aria-label="Business Email">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 QuickShip™ Logistics Inc. All rights reserved.</div>
+        <div class="footer-disclaimer">
+          <strong>Demo Notice:</strong> Educational frontend prototype. No real tracking API connected.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

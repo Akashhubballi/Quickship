@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a courier pickup with QuickShip Logistics. Fast doorstep collection and guaranteed parcel delivery.">
+  <title>Book a Courier Delivery | QuickShip™ Logistics</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Top Header & Navigation
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="QuickShip Logistics Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <span class="brand-text">Quick<span>Ship</span></span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="nav-toggle-label" title="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="tracking.html" class="nav-link">Tracking</a>
+        <a href="booking.html" class="nav-link active">Book Courier</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tracking.html" class="btn btn-secondary btn-sm">Track Parcel</a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book Delivery</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. Booking Page Header
+       ======================================================================== -->
+  <section class="section-alt" style="padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <span class="section-tag">Order Dispatch</span>
+      <h1 class="section-title" style="margin-bottom: 0.5rem;">Schedule Courier Pickup</h1>
+      <p class="section-subtitle">Fill in sender, recipient, and parcel specifications to schedule a certified courier pickup.</p>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. Main Booking Form Layout (Two-Column Flex/Grid)
+       ======================================================================== -->
+  <main class="section">
+    <div class="container">
+      
+      <!-- Demonstration Disclaimer Notice -->
+      <div class="demo-alert-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <div>
+          <strong>Demonstration Prototype:</strong> This form demonstrates semantic HTML5 validation and CSS styling. Form submission will redirect to the Tracking page with sample data.
+        </div>
+      </div>
+
+      <div class="booking-page-layout">
+        
+        <!-- Left Column: Comprehensive Booking Form -->
+        <div class="booking-form-card">
+          <form action="tracking.html" method="GET">
+            
+            <!-- Hidden tracking ID passed to simulate tracking page -->
+            <input type="hidden" name="id" value="QS-8829-US">
+
+            <!-- Section 1: Sender Information -->
+            <fieldset class="form-fieldset">
+              <legend class="fieldset-legend">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                1. Sender & Pickup Details
+              </legend>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="sender-name" class="form-label">Full Name <span class="required">*</span></label>
+                  <input type="text" id="sender-name" name="sender_name" class="form-control" placeholder="e.g. Alex Morgan" required value="Alex Morgan">
+                </div>
+
+                <div class="form-group">
+                  <label for="sender-email" class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" id="sender-email" name="sender_email" class="form-control" placeholder="alex@company.com" required value="alex.morgan@techcorp.io">
+                </div>
+
+                <div class="form-group">
+                  <label for="sender-phone" class="form-label">Phone Number <span class="required">*</span></label>
+                  <input type="tel" id="sender-phone" name="sender_phone" class="form-control" placeholder="+1 (555) 019-2834" required value="+1 (555) 839-2041">
+                </div>
+
+                <div class="form-group">
+                  <label for="pickup-date" class="form-label">Preferred Pickup Date <span class="required">*</span></label>
+                  <input type="date" id="pickup-date" name="pickup_date" class="form-control" required value="2026-11-21">
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="pickup-address" class="form-label">Street Address <span class="required">*</span></label>
+                  <input type="text" id="pickup-address" name="pickup_address" class="form-control" placeholder="Suite, Street Number, Building" required value="450 Market Street, Floor 14">
+                </div>
+
+                <div class="form-group">
+                  <label for="pickup-city" class="form-label">City <span class="required">*</span></label>
+                  <input type="text" id="pickup-city" name="pickup_city" class="form-control" placeholder="San Francisco" required value="San Francisco">
+                </div>
+
+                <div class="form-group">
+                  <label for="pickup-zip" class="form-label">Postal / ZIP Code <span class="required">*</span></label>
+                  <input type="text" id="pickup-zip" name="pickup_zip" class="form-control" placeholder="94105" required value="94105">
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Section 2: Receiver Information -->
+            <fieldset class="form-fieldset">
+              <legend class="fieldset-legend">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7" r="4"></circle>
+                  <line x1="20" y1="8" x2="20" y2="14"></line>
+                  <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                2. Recipient & Destination Details
+              </legend>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="receiver-name" class="form-label">Recipient Name <span class="required">*</span></label>
+                  <input type="text" id="receiver-name" name="receiver_name" class="form-control" placeholder="e.g. Rachel Adams" required value="Rachel Adams">
+                </div>
+
+                <div class="form-group">
+                  <label for="receiver-email" class="form-label">Recipient Email <span class="required">*</span></label>
+                  <input type="email" id="receiver-email" name="receiver_email" class="form-control" placeholder="rachel@adamslaw.com" required value="rachel.adams@lawfirm.com">
+                </div>
+
+                <div class="form-group">
+                  <label for="receiver-phone" class="form-label">Recipient Phone <span class="required">*</span></label>
+                  <input type="tel" id="receiver-phone" name="receiver_phone" class="form-control" placeholder="+1 (555) 728-1920" required value="+1 (555) 392-8172">
+                </div>
+
+                <div class="form-group">
+                  <label for="delivery-instructions" class="form-label">Delivery Note (Optional)</label>
+                  <input type="text" id="delivery-instructions" name="delivery_instructions" class="form-control" placeholder="e.g. Leave with front desk concierge">
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="delivery-address" class="form-label">Destination Address <span class="required">*</span></label>
+                  <input type="text" id="delivery-address" name="delivery_address" class="form-control" placeholder="Apt, Suite, Street Name" required value="725 5th Avenue, Suite 800">
+                </div>
+
+                <div class="form-group">
+                  <label for="delivery-city" class="form-label">City <span class="required">*</span></label>
+                  <input type="text" id="delivery-city" name="delivery_city" class="form-control" placeholder="New York" required value="New York">
+                </div>
+
+                <div class="form-group">
+                  <label for="delivery-zip" class="form-label">Postal / ZIP Code <span class="required">*</span></label>
+                  <input type="text" id="delivery-zip" name="delivery_zip" class="form-control" placeholder="10022" required value="10022">
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Section 3: Parcel Specifications -->
+            <fieldset class="form-fieldset">
+              <legend class="fieldset-legend">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+                3. Parcel Characteristics
+              </legend>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="parcel-type" class="form-label">Package Category <span class="required">*</span></label>
+                  <select id="parcel-type" name="parcel_type" class="form-control" required>
+                    <option value="documents">Confidential Documents / Contracts</option>
+                    <option value="electronics" selected>Consumer Electronics & Devices</option>
+                    <option value="apparel">Apparel & Fashion Merchandise</option>
+                    <option value="fragile">Fragile / High-Value Item</option>
+                    <option value="medical">Medical or Lab Specimens</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="parcel-weight" class="form-label">Total Weight (kg) <span class="required">*</span></label>
+                  <input type="number" id="parcel-weight" name="parcel_weight" class="form-control" min="0.1" max="100" step="0.1" value="2.5" required>
+                </div>
+
+                <div class="form-group full-width">
+                  <label class="form-label">Package Dimensions (cm) - Optional</label>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;">
+                    <input type="number" name="length" class="form-control" placeholder="Length (30)" value="30">
+                    <input type="number" name="width" class="form-control" placeholder="Width (20)" value="20">
+                    <input type="number" name="height" class="form-control" placeholder="Height (15)" value="15">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Section 4: Delivery Speed Selection (Pure CSS Radio Cards) -->
+            <fieldset class="form-fieldset">
+              <legend class="fieldset-legend">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                4. Select Delivery Tier
+              </legend>
+
+              <div class="delivery-options-grid">
+                
+                <!-- Option 1: Standard Ground -->
+                <div>
+                  <input type="radio" name="delivery_tier" id="tier-standard" value="standard" class="option-radio-input">
+                  <label for="tier-standard" class="option-card-label">
+                    <div class="option-card-title">Standard Ground</div>
+                    <div class="option-card-price">$8.50</div>
+                    <div class="option-card-time">2–4 Business Days</div>
+                  </label>
+                </div>
+
+                <!-- Option 2: Express Priority (Checked by default) -->
+                <div>
+                  <input type="radio" name="delivery_tier" id="tier-express" value="express" class="option-radio-input" checked>
+                  <label for="tier-express" class="option-card-label">
+                    <span class="badge badge-primary" style="margin-bottom: 0.5rem;">Recommended</span>
+                    <div class="option-card-title">Express Air</div>
+                    <div class="option-card-price">$18.90</div>
+                    <div class="option-card-time">Next Morning (by 10:30 AM)</div>
+                  </label>
+                </div>
+
+                <!-- Option 3: Same-Day -->
+                <div>
+                  <input type="radio" name="delivery_tier" id="tier-sameday" value="sameday" class="option-radio-input">
+                  <label for="tier-sameday" class="option-card-label">
+                    <div class="option-card-title">Same-Day Urgent</div>
+                    <div class="option-card-price">$29.50</div>
+                    <div class="option-card-time">Within 4 Hours Metro</div>
+                  </label>
+                </div>
+
+              </div>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <div style="margin-top: 2rem;">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Confirm & Schedule Pickup
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Right Column: Sticky Booking Summary -->
+        <aside class="order-summary-card">
+          <h2 class="summary-title">Booking Summary</h2>
+          
+          <div class="summary-rows">
+            <div class="summary-row">
+              <span>Service Selected</span>
+              <strong style="color: var(--text-dark);">Express Air Priority</strong>
+            </div>
+            <div class="summary-row">
+              <span>Base Freight (2.5 kg)</span>
+              <span>$18.90</span>
+            </div>
+            <div class="summary-row">
+              <span>Doorstep Pickup Fee</span>
+              <span style="color: var(--accent-green); font-weight: 600;">FREE</span>
+            </div>
+            <div class="summary-row">
+              <span>Loss Coverage ($1,000)</span>
+              <span style="color: var(--accent-green); font-weight: 600;">INCLUDED</span>
+            </div>
+            <div class="summary-row">
+              <span>Estimated Tax (VAT 5%)</span>
+              <span>$0.95</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total Estimated</span>
+              <span>$19.85</span>
+            </div>
+          </div>
+
+          <ul class="summary-perks">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Automated GPS Driver Tracking
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Free SMS & Email Status Alerts
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Digital Signature on Delivery
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Carbon-Neutral Delivery Offset
+            </li>
+          </ul>
+
+          <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
+            🔒 256-Bit SSL Encrypted Dispatch
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       4. Professional Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <span>Quick<span style="color: #60a5fa;">Ship</span></span>
+          </a>
+          <p class="footer-desc">
+            QuickShip is a commercial-grade courier logistics platform delivering parcels with speed, transparency, and high reliability.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Delivery Services</a></li>
+            <li><a href="tracking.html">Track Shipment</a></li>
+            <li><a href="booking.html">Book Courier Pickup</a></li>
+            <li><a href="contact.html">Support & FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Logistics Tiers</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Same-Day Express</a></li>
+            <li><a href="services.html">Standard Ground</a></li>
+            <li><a href="services.html">Express Air Priority</a></li>
+            <li><a href="services.html">Enterprise Freight</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Logistics Briefing</h4>
+          <p class="footer-newsletter-text">Subscribe for shipping rate updates and logistics tips.</p>
+          <form class="newsletter-form" action="#" method="POST" onsubmit="return false;">
+            <input type="email" class="newsletter-input" placeholder="Your business email" required aria-label="Business Email">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 QuickShip™ Logistics Inc. All rights reserved.</div>
+        <div class="footer-disclaimer">
+          <strong>Demo Notice:</strong> Educational frontend prototype. No real transaction occurs.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

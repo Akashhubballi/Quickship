@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickShip Logistics - Modern, enterprise-grade courier and parcel delivery service. Fast, secure, and intelligent global logistics.">
+  <title>QuickShip™ Logistics | Next-Gen Courier & Express Parcel Delivery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Top Header & Navigation (Pure CSS Mobile Menu via Checkbox Hack)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="QuickShip Logistics Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <span class="brand-text">Quick<span>Ship</span></span>
+      </a>
+
+      <!-- Pure CSS Hamburger Checkbox Toggle (No JS Required) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="nav-toggle-label" title="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="tracking.html" class="nav-link">Tracking</a>
+        <a href="booking.html" class="nav-link">Book Courier</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Header CTA Actions -->
+      <div class="nav-actions">
+        <a href="tracking.html" class="btn btn-secondary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Track Parcel
+        </a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book Delivery</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. Hero Section with Parcel Tracking Input UI & Live Shipment Showcase
+       ======================================================================== -->
+  <main>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        
+        <!-- Left Column: Copy & Quick Tracking Widget -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-pill">New</span>
+            <span>⚡ Ultra-fast 2-hour intra-city courier network</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Fast, Reliable & Intelligent <span>Parcel Delivery</span> Across Cities.
+          </h1>
+          
+          <p class="hero-desc">
+            Experience next-generation shipping with automated route optimization, real-time GPS tracking, and guaranteed on-time doorstep handoffs for businesses and individuals.
+          </p>
+
+          <!-- Parcel Tracking Input UI Component -->
+          <div class="quick-track-card">
+            <div class="quick-track-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              Quick Parcel Tracker
+            </div>
+            <form action="tracking.html" method="GET" class="track-form">
+              <div class="track-input-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+                <input 
+                  type="text" 
+                  name="tracking_id" 
+                  class="track-input" 
+                  placeholder="Enter Tracking ID (e.g., QS-8829-US)" 
+                  value="QS-8829-US"
+                  required 
+                  aria-label="Enter Tracking Number"
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Track Now</button>
+            </form>
+            <div class="track-examples">
+              <span>Try sample IDs:</span> 
+              <a href="tracking.html"><code>QS-8829-US</code></a> (Express) or 
+              <a href="tracking.html"><code>QS-4412-GB</code></a> (Same-Day)
+            </div>
+          </div>
+
+          <!-- Dual Hero Call to Action Buttons -->
+          <div class="hero-actions">
+            <a href="booking.html" class="btn btn-primary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              Book a Delivery
+            </a>
+            <a href="services.html" class="btn btn-secondary btn-lg">View Rates & Services</a>
+          </div>
+
+          <!-- Trust Signals -->
+          <div class="trust-signals">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>100% Insured Freight</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>99.8% On-Time Guarantee</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>24/7 Live Monitoring</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Visual Package Status Card -->
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            
+            <div class="live-package-card">
+              <div class="live-package-header">
+                <div>
+                  <span class="badge badge-primary">Express Air Transit</span>
+                  <div class="tracking-num-tag" style="margin-top: 4px;">AWB #QS-8829-US</div>
+                </div>
+                <span class="badge badge-success">● On Schedule</span>
+              </div>
+
+              <!-- Route Display -->
+              <div class="package-route">
+                <div class="route-stop">
+                  <div class="city-code">SFO</div>
+                  <div class="city-name">San Francisco, CA</div>
+                </div>
+                
+                <div class="route-line">
+                  <svg class="route-plane-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                  <div class="route-bar"></div>
+                </div>
+
+                <div class="route-stop destination">
+                  <div class="city-code">JFK</div>
+                  <div class="city-name">New York, NY</div>
+                </div>
+              </div>
+
+              <div class="package-progress-info">
+                <span>Estimated Arrival:</span>
+                <strong>Today, by 4:30 PM EST</strong>
+              </div>
+
+              <!-- Driver Pill -->
+              <div class="driver-pill">
+                <div class="driver-avatar">MR</div>
+                <div class="driver-details">
+                  <div class="driver-name">Michael Reyes</div>
+                  <div class="driver-status" style="color: var(--text-muted); font-size: 0.75rem;">Verified QuickShip Courier • Van #402</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Trust Metric Card -->
+            <div class="floating-stat-card">
+              <div class="stat-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="stat-metric">4.9 / 5.0</div>
+                <div class="stat-label">From 50,000+ verified customer reviews</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. Key Performance Statistics Bar
+         ======================================================================== -->
+    <section class="stats-bar">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">99.8%</div>
+            <div class="stat-title">On-Time Delivery Success</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4.2M+</div>
+            <div class="stat-title">Parcels Handled Annually</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">150+</div>
+            <div class="stat-title">Smart Distribution Hubs</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15 Min</div>
+            <div class="stat-title">Average Metro Pickup Time</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. Delivery Services Overview Section
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Flexible Logistics</span>
+          <h2 class="section-title">Delivery Services Tailored to Your Timeline</h2>
+          <p class="section-subtitle">Whether it's an urgent legal document or a cross-country bulk cargo shipment, QuickShip has an engineered tier for you.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1: Same-Day Delivery -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Same-Day Express</h3>
+            <p class="service-card-desc">Rapid door-to-door courier dispatch within metro regions in as fast as 2 to 4 hours with dedicated riders.</p>
+            <ul class="service-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Direct courier assignment
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Digital signature & photo proof
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Up to 15 kg package weight
+              </li>
+            </ul>
+            <a href="services.html" class="btn btn-secondary btn-sm">Explore Details &rarr;</a>
+          </div>
+
+          <!-- Card 2: Standard Ground -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Standard Ground</h3>
+            <p class="service-card-desc">Cost-efficient domestic shipping for non-urgent packages with reliable 2–4 business days delivery window.</p>
+            <ul class="service-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Economical volume rates
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Full checkpoint barcode scans
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Eco-optimized delivery routes
+              </li>
+            </ul>
+            <a href="services.html" class="btn btn-secondary btn-sm">Explore Details &rarr;</a>
+          </div>
+
+          <!-- Card 3: Express Air Priority -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Express Air Priority</h3>
+            <p class="service-card-desc">Guaranteed next-morning delivery nationwide via chartered air connections with top-priority handling.</p>
+            <ul class="service-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Guaranteed by 10:30 AM next day
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Temperature-controlled options
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                High-value item insurance
+              </li>
+            </ul>
+            <a href="services.html" class="btn btn-secondary btn-sm">Explore Details &rarr;</a>
+          </div>
+
+          <!-- Card 4: Enterprise Freight & B2B -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Business & Freight</h3>
+            <p class="service-card-desc">Scalable commercial logistics, palletised freight, scheduled recurring pickups, and dedicated account manager.</p>
+            <ul class="service-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Heavy & pallet freight support
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Monthly enterprise invoicing
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Custom API & Webhook integration
+              </li>
+            </ul>
+            <a href="services.html" class="btn btn-secondary btn-sm">Explore Details &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. "How It Works" 4-Step Process Section
+         ======================================================================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Seamless Flow</span>
+          <h2 class="section-title">Shipping Made Effortless in 4 Steps</h2>
+          <p class="section-subtitle">From booking your pickup to safe handover at the destination address, we manage the entire chain.</p>
+        </div>
+
+        <div class="how-it-works-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-badge">1</div>
+            <div class="step-icon-wrap">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              </svg>
+            </div>
+            <h3 class="step-title">Enter Parcel Details</h3>
+            <p class="step-desc">Input sender, recipient, and parcel weight using our intuitive booking form to receive upfront transparent pricing.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-badge">2</div>
+            <div class="step-icon-wrap">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                <path d="M15 18H9"></path>
+                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                <circle cx="17" cy="18" r="2"></circle>
+                <circle cx="7" cy="18" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="step-title">Doorstep Pickup</h3>
+            <p class="step-desc">Our certified courier arrives right at your specified address within the selected pickup slot. No need to visit a post office.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-badge">3</div>
+            <div class="step-icon-wrap">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </div>
+            <h3 class="step-title">Live GPS Tracking</h3>
+            <p class="step-desc">Follow your shipment milestone by milestone on our tracking page with automated updates and verified hub timestamps.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card">
+            <div class="step-badge">4</div>
+            <div class="step-icon-wrap">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="step-title">Guaranteed Delivery</h3>
+            <p class="step-desc">Safe handover to the recipient with digital signature confirmation and immediate delivery proof receipt emailed to you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. "Why Choose QuickShip" Grid Section
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Enterprise Standard</span>
+          <h2 class="section-title">Why Leading Brands Choose QuickShip</h2>
+          <p class="section-subtitle">Built with commercial-grade speed, transparency, and care for modern delivery requirements.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-circle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">No Hidden Surcharges</h3>
+              <p class="feature-desc">What you see is what you pay. Fuel, handling, and doorstep collection surcharges are included upfront in our rate card.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-circle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">End-to-End Package Insurance</h3>
+              <p class="feature-desc">Every package shipped through QuickShip is automatically insured against loss or damage up to $1,000 at zero extra cost.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-circle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">Verified Background Couriers</h3>
+              <p class="feature-desc">Every courier partner undergoes rigorous biometric background checks, driving evaluation, and hospitality training.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-circle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 0 0-7.07 17.07A10 10 0 0 0 19.07 4.93 9.93 9.93 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                <path d="m10 15 5-3-5-3v6z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">Eco-Friendly Electric Fleet</h3>
+              <p class="feature-desc">Over 65% of our intra-city last-mile deliveries are conducted using 100% electric delivery vans and e-cargo bikes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. Testimonials Section
+         ======================================================================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Client Reviews</span>
+          <h2 class="section-title">Trusted by Thousands of Senders</h2>
+          <p class="section-subtitle">Here is what e-commerce merchants and individual senders say about our courier speed and care.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars" aria-label="5 stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <p class="testimonial-quote">
+                "QuickShip's Same-Day service has completely transformed our medical supplies store. When a customer orders emergency orthotics, we dispatch within 20 minutes. Not a single delayed delivery in 8 months."
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar">SK</div>
+              <div>
+                <div class="client-name">Sarah Jenkins</div>
+                <div class="client-company">Operations Lead, Apex MedTech</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars" aria-label="5 stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <p class="testimonial-quote">
+                "The tracking transparency is incredible. Our clients love the live progress timeline and SMS updates. Booking multiple parcels takes seconds, and the pricing is very reasonable."
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar">DL</div>
+              <div>
+                <div class="client-name">David Lawson</div>
+                <div class="client-company">Founder, CraftWorks Goods</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars" aria-label="5 stars">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <p class="testimonial-quote">
+                "I sent an urgent legal contract from Boston to San Francisco via QuickShip Express. It reached the court clerk before 10 AM with verified digital signature receipt. Lifesavers!"
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar">EM</div>
+              <div>
+                <div class="client-name">Elena Moreno</div>
+                <div class="client-company">Senior Partner, Moreno & Clark LLP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. Call to Action (CTA) Banner
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 class="cta-title">Ready to Experience Frictionless Shipping?</h2>
+          <p class="cta-desc">Book your first courier pickup in under 60 seconds with no contract or upfront commitments required.</p>
+          <div class="cta-buttons">
+            <a href="booking.html" class="btn btn-primary btn-lg">Book Courier Now</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3);">Contact Support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       9. Professional Global Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <span>Quick<span style="color: #60a5fa;">Ship</span></span>
+          </a>
+          <p class="footer-desc">
+            QuickShip is a commercial-grade courier logistics platform delivering parcels with speed, transparency, and high reliability across domestic and international corridors.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Delivery Services</a></li>
+            <li><a href="tracking.html">Track Shipment</a></li>
+            <li><a href="booking.html">Book Courier Pickup</a></li>
+            <li><a href="contact.html">Support & FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-heading">Logistics Tiers</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Same-Day Express</a></li>
+            <li><a href="services.html">Standard Ground</a></li>
+            <li><a href="services.html">Express Air Priority</a></li>
+            <li><a href="services.html">Enterprise Freight</a></li>
+            <li><a href="contact.html">Custom API Integration</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="footer-heading">Logistics Briefing</h4>
+          <p class="footer-newsletter-text">Subscribe for shipping rate updates, volume discounts, and supply chain insights.</p>
+          <form class="newsletter-form" action="#" method="POST" onsubmit="return false;">
+            <input type="email" class="newsletter-input" placeholder="Your business email" required aria-label="Business Email">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 QuickShip™ Logistics Inc. All rights reserved.</div>
+        <div class="footer-disclaimer">
+          <strong>Demo Notice:</strong> This website is an educational frontend prototype demonstrating pure HTML5 & CSS3 layout architecture. No actual courier dispatch occurs.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
